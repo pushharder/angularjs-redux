@@ -1,0 +1,1 @@
+import mainModule from './app/main.module';
