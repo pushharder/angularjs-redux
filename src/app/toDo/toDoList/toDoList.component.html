@@ -1,0 +1,8 @@
+<div>
+    {{$ctrl.taskList}}
+	<ul>
+		<li ng-repeat="task in $ctrl.taskList">
+			<task-component task="task" is-done="task.isDone"></task-component>
+		</li>
+	</ul>
+</div>
