@@ -1,1 +1,6 @@
-<div>{{$ctrl.name}}</div>
+<div class="to-do-form">
+	<input type="checkbox" ng-change="$ctrl.handleCheckboxToggle()" ng-model="$ctrl.isChecked"/>
+	<form ng-submit="$ctrl.handleSubmit()">
+		<input type="text" ng-model="$ctrl.text"/>
+	</form>
+</div>

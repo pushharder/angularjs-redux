@@ -1,0 +1,8 @@
+.to-do-form input {
+	margin: 5px 10px;
+}
+
+.to-do-form {
+	display: flex;
+	flex-direction: row;
+}

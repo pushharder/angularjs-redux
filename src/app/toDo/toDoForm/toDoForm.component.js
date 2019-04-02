@@ -3,5 +3,10 @@ import controller from './toDoForm.controller';
 
 export default {
 	template,
-	controller
+    controller,
+    bindings: {
+        submit: '&',
+        onCheckboxToggle: '&',
+        isAllDone: '<'
+    }
 };
