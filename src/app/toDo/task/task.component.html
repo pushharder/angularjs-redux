@@ -2,7 +2,7 @@
 	<input
 		type="checkbox"
 		ng-model="$ctrl.isDone"
-		ng-change="$ctrl.changeStatus($event)"
+		ng-change="$ctrl.changeStatus({id: $ctrl.task.id, isDone: $ctrl.isDone})"
 	/>
 	<span>{{ $ctrl.text }}</span>
 </div>

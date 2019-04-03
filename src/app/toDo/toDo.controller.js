@@ -9,14 +9,21 @@ export default class {
 	addTask(text) {
 		initialList.push({
 			text,
-			isDone: false
-        });
-        this.isAllDone = this.isAllTasksDone();
+			isDone: false,
+			id: Math.random() * 99 + 1
+		});
+		this.isAllDone = this.isAllTasksDone();
 	}
 
 	toggleAll(isChecked) {
 		initialList.forEach(task => {
 			task.isDone = isChecked;
+		});
+		this.isAllDone = this.isAllTasksDone();
+	}
+	toggleTask(id, isDone) {
+		initialList.forEach(task => {
+			if (task.id === id) task.isDone = isDone;
         });
         this.isAllDone = this.isAllTasksDone();
 	}
@@ -32,6 +39,6 @@ export default class {
 }
 
 const initialList = [
-	{ text: 'toDo1', isDone: false },
-	{ text: 'toDo2', isDone: true }
+	{ text: 'toDo1', isDone: false, id: 1 },
+	{ text: 'toDo2', isDone: true, id: 2 }
 ];
